@@ -22,7 +22,10 @@ public class controller {
     private CheckInService checkInService;
 
 
-
+    @GetMapping("/")
+    public String home() {
+        return "Welcome to the application!";
+    }
     @GetMapping("/allUsers")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.findAllUsers();
